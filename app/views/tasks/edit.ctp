@@ -8,3 +8,7 @@
              ?>
           </fieldset>
 <?php echo $form->end('Save');?>
+
+<?php echo $html->link('List All Tasks', array('action'=>'
+                                                    index')); ?><br />
+<?php echo $html->link('Add Task', array('action'=>'add')); ?>
