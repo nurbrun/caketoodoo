@@ -33,3 +33,4 @@
 			<?php endforeach; ?>
 			       </table>
 			    <?php endif; ?>
+<?php echo $html->link('Add Task', array('action'=>'add')); ?>

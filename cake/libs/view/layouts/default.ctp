@@ -35,10 +35,10 @@
 </head>
 <body>
 	<div id="container">
-		<div id="header">
+		<!-- <div id="header">
 			<h1><?php echo $this->Html->link(__('CakePHP: the rapid development php framework', true), 'http://cakephp.org'); ?></h1>
 		</div>
-		<div id="content">
+ -->		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
 
@@ -54,6 +54,6 @@
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php //echo $this->element('sql_dump'); ?>
 </body>
 </html>
