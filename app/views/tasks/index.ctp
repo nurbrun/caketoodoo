@@ -21,10 +21,10 @@
 		         ?>
 				</td> 
 				<td>
-		         	<?php echo $task['Task']['created'] ?>
+		         	<?php echo $time->niceShort($task['Task']['created']) ?>
 			    </td>
 			    <td>
-			        <?php echo $task['Task']['modified'] ?>
+			        <?php echo $time->niceShort($task['Task']['modified']) ?>
 				</td> 
 				<td>
 			         <?php echo $html->link('Edit', array('action'=>'edit', $task['Task']['id'])); ?>

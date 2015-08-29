@@ -1,7 +1,7 @@
 <?php
 class TasksController extends AppController {
 	var $name = 'Tasks';
-	var $helpers = array('Html', 'Form');
+	var $helpers = array('Html', 'Form', 'Time');
 	var $components = array('Session');
 
 	function index($status=null) {
