@@ -4,9 +4,18 @@ class TasksController extends AppController {
 	var $helpers = array('Html', 'Form');
 	var $components = array('Session');
 
-	function index() {
-		$this -> set('tasks', $this->Task->find('all'));
-	}
+	function index($status=null) {
+          if($status == 'done')
+             $tasks = $this->Task->find('all', array('conditions' =>
+                                            array('Task.done' => '1')));
+          else if($status == 'pending')
+             $tasks = $this->Task->find('all', array('conditions' =>
+                                            array('Task.done' => '0')));
+          else
+             $tasks = $this->Task->find('all');
+          $this->set('tasks', $tasks);
+          $this->set('status', $status);
+  }
 
 	function add() {
        if (!empty($this->data)) {

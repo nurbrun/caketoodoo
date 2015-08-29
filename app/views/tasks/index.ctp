@@ -35,3 +35,13 @@
 			       </table>
 			    <?php endif; ?>
 <?php echo $html->link('Add Task', array('action'=>'add')); ?>
+
+<?php if($status): ?>
+          <?php echo $html->link('List All Tasks', array('action'=> 'index')); ?><br />
+       <?php endif;?>
+       <?php if($status != 'done'): ?>
+          <?php echo $html->link('List Done Tasks', array('action'=> 'index', 'done')); ?><br />
+       <?php endif;?>
+       <?php if($status != 'pending'): ?>
+          <?php echo $html->link('List Pending Tasks', array('action'=> 'index', 'pending')); ?><br />
+       <?php endif;?>

@@ -10,3 +10,6 @@
 <?php
    echo $html->link('List All Tasks', array('action'=>'index')); 
 ?>
+<?php echo $html->link('List Done Tasks', array('action'=> 'index', 'done')); ?><br />
+<?php echo $html->link('List Pending Tasks', array('action'=> 'index', 'pending')); ?><br />
+
