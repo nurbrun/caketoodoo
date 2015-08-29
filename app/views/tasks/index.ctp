@@ -28,6 +28,7 @@
 				</td> 
 				<td>
 			         <?php echo $html->link('Edit', array('action'=>'edit', $task['Task']['id'])); ?>
+			         <?php echo $html->link('Delete', array('action'=>'delete', $task['Task']['id']), null, 'Are you sure you want to delete this task?'); ?>
 			      </td>
 			   </tr>
 			<?php endforeach; ?>

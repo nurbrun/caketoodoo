@@ -35,5 +35,16 @@ class TasksController extends AppController {
 						} 				
 					}
 				}
-}
+		
+		function delete($id = null) {
+          if (!$id) {
+             $this->Session->setFlash('Invalid id for Task');
+             $this->redirect(array('action'=>'index'), null, true);
+          }
+          if ($this->Task->delete($id)) {
+             $this->Session->setFlash('Task #'.$id.' deleted');
+             $this->redirect(array('action'=>'index'), null, true);
+					} 
+		}
+	}
 ?>
