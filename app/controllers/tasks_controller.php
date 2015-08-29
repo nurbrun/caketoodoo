@@ -18,5 +18,21 @@ class TasksController extends AppController {
 			}
 		}
 	}
+	function edit($id = null) {
+          if (!$id) {
+             $this->Session->setFlash('Invalid Task');
+             $this->redirect(array('action'=>'index'), null, true);
+          }
+          if (empty($this->data)) {
+             $this->data = $this->Task->find(array('id' => $id));
+          } else {
+             if ($this->Task->save($this->data)) {
+                $this->Session->setFlash('The Task has been saved');
+                $this->redirect(array('action'=>'index'), null, true);
+             } else {
+                $this->Session->setFlash('The Task could not be saved. Please, try again.');
+						} 				
+					}
+				}
 }
 ?>

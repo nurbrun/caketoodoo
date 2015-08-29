@@ -27,7 +27,7 @@
 			        <?php echo $task['Task']['modified'] ?>
 				</td> 
 				<td>
-			         <!-- actions on tasks will be added later -->
+			         <?php echo $html->link('Edit', array('action'=>'edit', $task['Task']['id'])); ?>
 			      </td>
 			   </tr>
 			<?php endforeach; ?>
